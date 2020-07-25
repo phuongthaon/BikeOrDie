@@ -39,11 +39,15 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="page-breadcrumb">
+<<<<<<< HEAD:public/view/front/hhh.php
                         <h2>Trạm xe</h2>
+=======
+                        <h2>Xe Đạp<span>.</span></h2>
+>>>>>>> 185bcb8cb33541f7280a472c11172ea442dc9a83:public/view/front/bike.php
                     </div>
                 </div>
                 <div class="col-lg-8">
-                    <img src="../../../img/add1.jpg" alt="">
+                    <img src="../../../img/markus-winkler-QjRk3rj2O1c-unsplash.jpg" alt="">
                 </div>
             </div>
         </div>
