@@ -28,7 +28,7 @@
                                         VALUES ('{$_SESSION['id']}', '{$time}',  CURRENT_TIMESTAMP(),  '{$bike}', '{$price['price']}')");
         $up = mysqli_query($con, "UPDATE bike SET status = 1 WHERE id = '{$bike}'");
 
-        header("Location: countDown.html");
+        header("Location: countDown.php?time={$time}&id={$bike}");
     }
 
 
