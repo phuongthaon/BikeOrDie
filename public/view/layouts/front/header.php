@@ -35,7 +35,7 @@
                 <nav class="main-menu mobile-menu">
                     <ul>
                         <li><a href="./index.php">Trang chủ</a></li>
-                        <li><a href="./categories.php">Các trạm xe</a>
+                        <li><a href="./station.php">Các trạm xe</a>
                             <!-- <ul class="sub-menu">
                                 <li><a href="product-page.php?id=1">Sản phẩm</a></li>
                                 <li><a href="shopping-cart.php">Mua hàng</a></li>
