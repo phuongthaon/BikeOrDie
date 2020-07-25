@@ -54,7 +54,7 @@
     <!-- Categories Page Section Begin -->
     <section class="categories-page spad">
         <div class="container">
-            <div class="categories-controls">
+            <!-- <div class="categories-controls">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="categories-filter">
@@ -64,16 +64,16 @@
                                     Sắp xếp
                                     </button>
                                     <div class="dropdown-menu">
-                                     <!--    <a class="dropdown-item" href="./categories.php?sortby=newest">Mới nhất</a>
+                                        <a class="dropdown-item" href="./categories.php?sortby=newest">Mới nhất</a>
                                         <a class="dropdown-item" href="./categories.php?sortby=priceup">Giá: Thấp -> Cao</a>
-                                        <a class="dropdown-item" href="./categories.php?sortby=pricedown">Giá: Cao -> Thấp</a> -->
+                                        <a class="dropdown-item" href="./categories.php?sortby=pricedown">Giá: Cao -> Thấp</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="row">
                 <?php
                     while($row = mysqli_fetch_array($result)){

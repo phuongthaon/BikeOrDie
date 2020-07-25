@@ -123,32 +123,14 @@
                     </div>
                 </div>
             </div>
-            <div class="row" id="product-list">
-                <?php
-                    $count = 0;
-                    while($row = mysqli_fetch_array($result) and $count < 10){
-                        if($row['category'] == 'Tiểu thuyết') $category = 'novel';
-                        elseif($row['category'] == 'Khoa học') $category = 'science';
-                        elseif($row['category'] == 'Truyện tranh') $category = 'comic';
-                        echo"
-                        <div class=\"col-lg-3 col-sm-6 mix all {$category}\">
-                            <div class=\"single-product-item\">
-                                <figure>
-                                    <a href=\"./product-page.php?id={$row['id']}\"><img width= 270 height= 370 style=\"object-fit: cover;\" src=\"../../../img/products/{$row['image']}\" alt=\"\"></a>
-                                    <div class=\"p-status\">new</div>
-                                </figure>
-                                <div class=\"product-text\">
-                                    <a href=\"./product-page.php?id={$row['id']}\">
-                                        <h6>{$row['name']}</h6>
-                                    </a>
-                                    <p>{$row['price']} Đ</p>
-                                </div>
-                            </div>
-                        </div>";
-                    $count++;
-                    }
-                ?>
-
+           <div class="map">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2574.7672108920424!2d105.78199961643556!3d21.03842911475024!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab354920c233%3A0x5d0313a3bfdc4f37!2sVNU%20University%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sbd!4v1586697990045!5m2!1sen!2sbd" 
+                            width="600" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                        </iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
