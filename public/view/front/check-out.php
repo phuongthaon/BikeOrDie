@@ -4,6 +4,9 @@
     <?php
         include('../layouts/front/head.php');
     ?>
+    <link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
 </head>
 <body>
     <?php
@@ -52,16 +55,56 @@
     <!-- Cart Total Page Begin -->
     <section class="cart-total-page spad">
         <div class="container">
-            <form action="#" class="checkout-form" method="POST">
+            <div style ="float: right !important;" class=" col-lg-6 order-table">
+                            <div class="cart-item">
+                                <span>Bảng giá</span> </div>
+                            <table id="table_id" class="display" >
+                                <thead>
+                                    <tr>
+                                        <th>Loại xe</th>
+                                        <th>Thời gian thuê</th>
+                                        <th>Giá</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                        $xx=mysqli_query($con,"SELECT * FROM pricelist");
+
+                                        while($price= mysqli_fetch_array($xx)){
+                                        if($price['categoryId']==1) $t="Xe địa hình";
+                                        else if($price['categoryId']==2) $t="Xe mini";
+                                        else $t="Xe đạp đôi";
+                                        echo "
+                                            <tr>
+                                                <td>{$t}</td>
+                                                <td> <= {$price['time']} tiếng</td>
+                                                <td> {$price['price']}</td>
+                                            </tr>
+                                        ";
+                                    }
+                                    ?>
+
+                                </tbody>
+                            </table>
+                               
+                                
+                         
+                            <!-- <div class="cart-item">
+                                <span>Dưới 1 giờ:</span><br>
+                                <span></span>
+                            </div> -->
+                            
+                        </div>
+           <!--  <form action="#" class="checkout-form" method="POST"> -->
                 <div class="row">
                     <div class="col-lg-12">
                         <h3>Thông tin </h3>
                     </div>
                    
                     
-                        <div class=" col-lg-12 order-table">
+                        <div class=" col-lg-8 order-table">
                             <div class="cart-item">
-                                <span>Trạm xe</span>
+                                <span>Loại xe</span>
                                 <?php
                                    
                                         echo"<p class=\"product-name\">{$category['name']}</p>";
@@ -70,26 +113,37 @@
                                 
                             </div>
                             <div class="cart-item">
-                                <span>Loại xe</span>
-                                <p><?php echo"<p class=\"product-name\">{$category['name']}</p>"; ?></p>
+                                <span>Loại thời gian mượn</span><br>
+                                <form method="POST" action="#">
+                                      <input type="radio" id="1hour" name="time" value="1">
+                                      <label for="1">Nhỏ hơn hoặc bằng 1 tiếng</label><br>
+                                      <input type="radio" id="1hour" name="time" value="3">
+                                      <label for="3">Từ 1 tiếng đến 3 tiếng</label><br>
+                                      <input type="radio" id="1hour" name="time" value="5">
+                                      <label for="5">Từ 3 tiếng đến 5 tiếng</label><br>
+                                      <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="payment-method">
+                                                <span>Phương thức thanh toán</span>
+                                                <ul>
+                                                    <li>Paypal <img src="../../../img/paypal.jpg" alt=""></li>
+                                                    <li>Credit / Debit card <img src="../../../img/mastercard.jpg" alt=""></li>
+                                                    
+                                                </ul>
+                                                <button type="submit" name="order">Thuê Xe</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                      <!-- <button type="submit" name="order">Thuê Xe</button> -->
+                                </form>
                             </div>
-                            <div class="cart-item">
-                                <span>Giá tiền</span>
-                                <p><?php echo "{$totalQuantity} Cuốn" ?></p>
-                            </div>
-                            <div class="cart-item">
-                                <span>Giờ thuê</span>
-                                <p><?php echo "{$_SESSION['fee']} Đ";?></p>
-                            </div>
-
-                            <div class="cart-total">
-                                <span>Tổng</span>
-                                <p><?php echo "{$totalSum} Đ" ?></p>
-                            </div>
+                            
                         </div>
+
+                        
                     
                 </div>
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-lg-12">
                         <div class="payment-method">
                             <h3>Phương thức thanh toán</h3>
@@ -101,8 +155,8 @@
                             <button type="submit" name="order">Thuê Xe</button>
                         </div>
                     </div>
-                </div>
-            </form>
+                </div> -->
+            <!-- </form> -->
         </div>
     </section>
     <!-- Cart Total Page End -->
@@ -117,6 +171,9 @@
     <?php
         include('../layouts/front/embed.js.php');
     ?>
+    <script>
+        $('#table_id').DataTable();
+    </script>
 </body>
 
 </html>

@@ -8,7 +8,22 @@
     include('../../../model/connect.php');
     //kiem tra xem nếu đặt hàng
     if(isset($_GET['id'])){
-    
+        $id = $_GET['id'];
+        $result =mysqli_fetch_array(mysqli_query($con, "SELECT * FROM bike WHERE id = $id "));
+        $category= mysqli_fetch_array(mysqli_query($con, "SELECT c.name, c.id FROM bike b Join category c On b.categoryId=c.id WHERE b.id= $id "));
+    }
+
+    if(isset($_POST['order'])){
+        $time=trim($_POST['time']);
+        // $user= $_SESSION["id"];
+        $bike= $id;
+        $price= mysqli_fetch_array(mysqli_query($con, "SELECT price FROM pricelist WHERE `time` = '{$time}' AND categoryId= '{$category['id']}' "));
+        $tmp = mysqli_query($con,"INSERT INTO activate( `userId`, `time`,  `borrowTime`, `bikeId`, `price`) 
+                                        VALUES ('{$_SESSION['id']}', '{$time}',  CURRENT_TIMESTAMP(),  '{$bike}', '{$price['price']}')");
+        echo "ẻtght";
+        header("Location: index.php");
+    }
+
 
         // khởi tạo mã đơn hàng
         // $orderId = orderIdRand();
@@ -31,6 +46,6 @@
         // // xoa sp trong gio hang sau khi dat hang
         // $del = mysqli_query($con, "DELETE FROM cart WHERE userId = '{$_SESSION['id']}'");
         // // chuyen trang sang orders.php
-        // header("Location: orders.php");
-    }
+        // // header("Location: orders.php");
+    
 ?> 
