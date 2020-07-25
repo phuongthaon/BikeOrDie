@@ -54,18 +54,18 @@
                     <img src="../../../img/avatar-2.gif" style="width: 300px; height:auto;"></img>
 
                     <div class="section-title">
-                        <h3>Nguyễn Ngọc Chi</h3>
+                        <h3>Nguyễn Văn A</h3>
                     </div>
                     <div>Tuổi: 20</div>
                     <div>Ngày sinh: 14/08/2000</div>
-                    <div>Địa chỉ mail: 123@gmail.com</div>
+                    <div>Địa chỉ mail: nva@gmail.com</div>
                 </div>
                 <!-- A grey horizontal navbar that becomes vertical on small screens -->
                 <nav class="navbar navbar-expand-sm bg-light">
 
                     <!-- Links -->
                     <ul class="navbar-nav">
-                        
+
                         <li class="nav-item">
                             <a class="nav-link" href="#">Thống kê</a>
                         </li>
@@ -107,41 +107,80 @@
 
                     <!-- Links -->
                     <ul class="navbar-nav">
-                        
+
                         <li class="nav-item">
                             <a class="nav-link" href="#">Lịch sử</a>
                         </li>
                     </ul>
 
                 </nav>
+
                 <?php
-                   $result = mysqli_query($con, "SELECT * FROM history where userId=".$_SESSION['id']);
-                   if ($row = mysqli_fetch_array($result) > 0){
-                       echo "yes";
-                       while($row = mysqli_fetch_array($result)){
+                $result = mysqli_query($con, "SELECT * FROM history where userId=" . $_SESSION['id']);
+                if ($row = mysqli_fetch_array($result) > 0) {
+                    echo "yes";
+                    while ($row = mysqli_fetch_array($result)) {
                         echo '<div class="row m-3">
                                 <div class="col-lg-4"><img src="https://vn-test-11.slatic.net/p/e9053f89bb6759db3589cc0720dfef1e.jpg" style="width: 300px; height: auto;"></img></div>
                                     <div class="col-lg">
                                     <h2>';
-                        $result2 = mysqli_query($con, "SELECT s.name, b.id from station s join bike b ON b.stationId = s.id having b.id =".$row['id']);
+                        $result2 = mysqli_query($con, "SELECT s.name, b.id from station s join bike b ON b.stationId = s.id having b.id =" . $row['id']);
                         $row2 = mysqli_fetch_array($result2);
                         echo $row2['name'];
                         echo '</h2>
-                                    <div><b>Thời gian mượn:</b>'.$row['time'].'</div>
-                                    <div><b>Số KM đi được:</b>'.$row['km'].'</div>
+                                    <div><b>Thời gian mượn:</b>' . $row['time'] . '</div>
+                                    <div><b>Số KM đi được:</b>' . $row['km'] . '</div>
                                 </div>
                             </div>';
-                        
                     }
-                   }
-                   else{
-                       echo "Bạn chưa mượn xe nào.";
-                   }
-                    
+                } else {
+                    echo "Bạn chưa mượn xe nào.";
+                }
+
 
                 ?>
+                <nav class="navbar navbar-expand-sm bg-light">
 
-                
+                    <!-- Links -->
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Vouchers</a>
+                        </li>
+                    </ul>
+
+                </nav>
+                <section class="features-section spad">
+                    <div class="features-ads">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="single-features-ads first">
+                                        <img src="../../../img/icons/gift-voucher.png" alt="" width="100px">
+                                        <h4>-10.000 đ</h4>
+                                        <h5 id=distance>Cho lần thuê xe tiếp theo. </h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="single-features-ads first">
+                                        <img src="../../../img/icons/gift-voucher.png" alt="" width="100px">
+                                        <h4>-10%</h4>
+                                        <h5>Cho 1 suất ăn bất kì tại nhà hàng cơm chay Taka</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="single-features-ads first">
+                                        <img src="../../../img/icons/gift-voucher.png" alt="" width="100px">
+                                        <h4>-5%</h4>
+                                        <h5>Cho hóa đơn từ 200k tại cửa hàng dụng cụ thể thao NLY</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
                 <div id="demo"></div>
                 <script>
                     var latLngA = new google.maps.LatLng(-34, 151);
