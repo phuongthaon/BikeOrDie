@@ -130,7 +130,7 @@
                                                     <li>Credit / Debit card <img src="../../../img/mastercard.jpg" alt=""></li>
                                                     
                                                 </ul>
-                                                <button type="submit" name="order">Thuê Xe</button>
+                                                <button type="submit" name="order" href="countDown.html">Thuê Xe</button>
                                             </div>
                                         </div>
                                     </div>
