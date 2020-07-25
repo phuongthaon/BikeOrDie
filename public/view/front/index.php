@@ -118,7 +118,7 @@
                         <ul class="product-controls">
                             <li data-filter="*">All</li>
                             <li data-filter=".science">Gần nhất</li>
-                            <li data-filter=".novel">Mượn nhiều nhất</li>
+                            
                         </ul>
                     </div>
                 </div>
