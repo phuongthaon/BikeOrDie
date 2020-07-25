@@ -10,7 +10,6 @@
 </head>
 <body>
     <?php
-        include('../../../controller/front/shopping-cart.php');
         include('../../../controller/front/check-out.php');
     ?>
     <!-- Page Preloder -->
@@ -115,12 +114,7 @@
                             <div class="cart-item">
                                 <span>Loại thời gian mượn</span><br>
                                 <form method="POST" action="#">
-                                      <input type="radio" id="1hour" name="time" value="1">
-                                      <label for="1">Nhỏ hơn hoặc bằng 1 tiếng</label><br>
-                                      <input type="radio" id="1hour" name="time" value="3">
-                                      <label for="3">Từ 1 tiếng đến 3 tiếng</label><br>
-                                      <input type="radio" id="1hour" name="time" value="5">
-                                      <label for="5">Từ 3 tiếng đến 5 tiếng</label><br>
+                                <input  id="time" type="number" max="5" name="time" required placeholder="Thời gian thuê xe " >
                                       <div class="row">
                                         <div class="col-lg-12">
                                             <div class="payment-method">

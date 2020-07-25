@@ -16,11 +16,19 @@
     if(isset($_POST['order'])){
         $time=trim($_POST['time']);
         // $user= $_SESSION["id"];
+        $_time=0;
+        if($time<=1) $_time=1;
+        else if ($time<=3) $_time = 3;
+        else $_time=5;
+
+        // $user= $_SESSION["id"];
         $bike= $id;
-        $price= mysqli_fetch_array(mysqli_query($con, "SELECT price FROM pricelist WHERE `time` = '{$time}' AND categoryId= '{$category['id']}' "));
-        $tmp = mysqli_query($con,"INSERT INTO activate( `userId`, `time`,  `borrowTime`, `bikeId`, `price`) 
+        $price= mysqli_fetch_array(mysqli_query($con, "SELECT price FROM pricelist WHERE time = '{$_time}' AND categoryId= '{$category['id']}' "));
+        $tmp = mysqli_query($con,"INSERT INTO activate( userId, time,  borrowTime, bikeId, price) 
                                         VALUES ('{$_SESSION['id']}', '{$time}',  CURRENT_TIMESTAMP(),  '{$bike}', '{$price['price']}')");
-        echo "ẻtght";
+        $up = mysqli_query($con, "UPDATE bike SET status = 1 WHERE id = '{$bike}'");
+
+
         header("Location: index.php");
     }
 

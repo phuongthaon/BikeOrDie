@@ -7,8 +7,20 @@
                
                 <div class="header-right">
                     <img src="../../../img/icons/search.png" alt="" class="search-trigger">
+                    <?php if (isset($_SESSION['name'])){
+                        echo "<a href=\"../../../public/view/front/profile.php\">";
+                        echo '<img src="../../../img/icons/man.png" alt="">';
+                        echo '</a>';
+                    }
+                    else{
+                        echo '<img src="../../../img/icons/man.png" alt="">';
+                    }
                     
-                    <img src="../../../img/icons/man.png" alt="">
+
+                    ?>
+
+                    
+                    
                    
                     <?php
                         if(isset($_SESSION['name'])){

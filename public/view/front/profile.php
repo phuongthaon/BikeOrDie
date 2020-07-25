@@ -4,6 +4,7 @@
 <head>
     <?php
     include('../layouts/front/head.php');
+    include('../../../model/connect.php');
     ?>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyA5y5AeQ-PE6Jr4L6z9_5sVuVEHu9LYFJI&sensor=false&v=3&libraries=geometry"></script>
     <style>
@@ -113,14 +114,34 @@
                     </ul>
 
                 </nav>
-                <div class="row m-3">
-                    <div class="col-lg-4"><img src="https://vn-test-11.slatic.net/p/e9053f89bb6759db3589cc0720dfef1e.jpg" style="width: 300px; height: auto;"></img></div>
-                    <div class="col-lg">
-                        <h2>Trạm 2B</h2>
-                        <div><b>Thời gian mượn:</b> 24/07/2020</div>
-                        <div><b>Số KM đi được:</b> 30</div>
-                    </div>
-                </div>
+                <?php
+                   $result = mysqli_query($con, "SELECT * FROM history where userId=".$_SESSION['id']);
+                   if ($row = mysqli_fetch_array($result) > 0){
+                       echo "yes";
+                       while($row = mysqli_fetch_array($result)){
+                        echo '<div class="row m-3">
+                                <div class="col-lg-4"><img src="https://vn-test-11.slatic.net/p/e9053f89bb6759db3589cc0720dfef1e.jpg" style="width: 300px; height: auto;"></img></div>
+                                    <div class="col-lg">
+                                    <h2>';
+                        $result2 = mysqli_query($con, "SELECT s.name, b.id from station s join bike b ON b.stationId = s.id having b.id =".$row['id']);
+                        $row2 = mysqli_fetch_array($result2);
+                        echo $row2['name'];
+                        echo '</h2>
+                                    <div><b>Thời gian mượn:</b>'.$row['time'].'</div>
+                                    <div><b>Số KM đi được:</b>'.$row['km'].'</div>
+                                </div>
+                            </div>';
+                        
+                    }
+                   }
+                   else{
+                       echo "Bạn chưa mượn xe nào.";
+                   }
+                    
+
+                ?>
+
+                
                 <div id="demo"></div>
                 <script>
                     var latLngA = new google.maps.LatLng(-34, 151);
