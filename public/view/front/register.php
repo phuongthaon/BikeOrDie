@@ -90,6 +90,7 @@
                     <div class="row">
                             <div class="col-lg-12">
                                 <input type="text" name="name" required placeholder="Tên">
+                                <input type="tel" name="phone"  pattern= "0[0-9\s.-]{9}" required placeholder="Số điện thoại">
                                 <input type="email" name="email" pattern=".+@.+(\.[a-z]{2,3}){1,2}" required placeholder="E-mail">
                                 <input type="password" name="password" required placeholder="Mật khẩu">
                                 <input type="password" name="confirmPassword" required placeholder="Nhập lại mật khẩu">

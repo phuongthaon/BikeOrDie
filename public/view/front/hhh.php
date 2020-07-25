@@ -39,7 +39,7 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="page-breadcrumb">
-                        <h2>Sách<span>.</span></h2>
+                        <h2>Trạm xe</h2>
                     </div>
                 </div>
                 <div class="col-lg-8">
@@ -76,7 +76,7 @@
             <div class="row">
                 <?php
                     while($row = mysqli_fetch_array($result)){
-                        echo"<div class=\"col-lg-3 col-md-6\">
+                        <!-- echo "<div class=\"col-lg-3 col-md-6\">
                                 <div class=\"single-product-item\">
                                 <a href=\"./product-page.php?id={$row['id']}\">
                                     <figure>
@@ -91,7 +91,7 @@
                                 <p>{$row['price']} Đ</p>
                             </div>
                         </div>
-                        </div>";  
+                        </div>";   -->
                     }            
                 ?>
             </div>

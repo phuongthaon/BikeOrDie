@@ -16,15 +16,15 @@
     </div>
     
     <!-- Search model -->
-	<!-- <div class="search-model">
-		<div class="h-100 d-flex align-items-center justify-content-center">
-			<div class="search-close-switch">+</div>
-			<form class="search-model-form">
-				<input type="text" id="search-input" placeholder="Tìm kiếm.....">
-			</form>
-		</div>
-	</div> -->
-	<!-- Search model end -->
+    <!-- <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Tìm kiếm.....">
+            </form>
+        </div>
+    </div> -->
+    <!-- Search model end -->
 
     <!-- Header Section Begin -->
     <?php
@@ -36,34 +36,34 @@
     <!-- Hero Slider Begin -->
     <section class="hero-slider">
         <div class="hero-items owl-carousel">
-            <div class="single-slider-item set-bg" data-setbg="../../../img/background1.jpg">
+            <div class="single-slider-item set-bg" data-setbg="https://images.unsplash.com/photo-1475666675596-cca2035b3d79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
                             <h1>2020</h1>
-                            <h2>Tri Thức.</h2>
+                            <h2>Đi xe đạp là niềm vui</h2>
                             <a href="./categories.php" class="primary-btn">See More</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="single-slider-item set-bg" data-setbg="../../../img/background2.jpg">
+            <div class="single-slider-item set-bg" data-setbg="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
                             <h1>2020</h1>
-                            <h2>Giải trí.</h2>
+                            <h2>Đi xe đạp là trải nghiệm</h2>
                             <a href="./categories.php" class="primary-btn">See More</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="single-slider-item set-bg" data-setbg="../../../img/background3.jpg">
+            <div class="single-slider-item set-bg" data-setbg="https://images.unsplash.com/photo-1501147830916-ce44a6359892?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
                             <h1>2020</h1>
-                            <h2>Tra cứu.</h2>
+                            <h2>Đi xe đạp để khỏe mạnh</h2>
                             <a href="./categories.php" class="primary-btn">See More</a>
                         </div>
                     </div>
@@ -81,14 +81,14 @@
                     <div class="col-lg-4">
                         <div class="single-features-ads first">
                             <img src="../../../img/icons/f-delivery.png" alt="">
-                            <h4>Giao hàng nhanh</h4>
+                            <h4>Thao tác tiện lợi</h4>
                             <p>Chúng tôi nhận giao hàng toàn quốc, đảm bảo hàng hóa được giao một cách nhanh chóng nhất với chi phí thấp. </p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="single-features-ads second">
                             <img src="../../../img/icons/coin.png" alt="">
-                            <h4>Thanh toán tiện lợi</h4>
+                            <h4>Thanh toán mọi lúc</h4>
                             <p>Chúng tôi chấp nhận thanh toán bằng nhiều phương thức khác nhau, rất an toàn và tiện lợi. </p>
                         </div>
                     </div>
@@ -113,13 +113,12 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <div class="section-title">
-                            <h2>Sản phẩm mới nhất</h2>
+                            <h2>Bảng tin</h2>
                         </div>
                         <ul class="product-controls">
                             <li data-filter="*">All</li>
-                            <li data-filter=".science">Sách khoa học</li>
-                            <li data-filter=".novel">Tiểu thuyết</li>
-                            <li data-filter=".comic">Truyện tranh</li>
+                            <li data-filter=".science">Gần nhất</li>
+                            <li data-filter=".novel">Mượn nhiều nhất</li>
                         </ul>
                     </div>
                 </div>

@@ -9,6 +9,7 @@ $name = $email = $phoneNumber = $password = $confirmPassword = '';
 $passwordIsNotMatch = $emailUsed = '';
 if (isset($_POST['register'])) {
     $name = trim($_POST['name']);
+    $phone = trim($_POST['phone']);
     $email = trim($_POST['email']);
     $password = trim($_POST['password']);
     $confirmPassword = trim($_POST['confirmPassword']);
@@ -31,7 +32,7 @@ if (isset($_POST['register'])) {
            
             $emailUsed = "E-mail này đã được sử dụng. Vui lòng đăng ký lại !";  
         } else {
-            $result = mysqli_query($con, "INSERT INTO users (name, email, password, created_at ) VALUE ('$name' , '$email', '$password', NOW()  )");
+            $result = mysqli_query($con, "INSERT INTO users (name, phone, email, password, created_at ) VALUES ('$name' , '$phone', '$email', '$password', NOW()  )");
             
 
             header("Location:" . $view_file);

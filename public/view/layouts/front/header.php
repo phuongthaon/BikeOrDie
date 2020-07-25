@@ -2,7 +2,7 @@
         <div class="container-fluid">
             <div class="inner-header">
                 <div class="logo">
-                    <a href="./index.php"><img src="../../../img/logo.png" alt=""></a>
+                    <a href="./index.php"><img width="132" height="45" src="../../../img/logo-2.png" alt=""></a>
                 </div>
                
                 <div class="header-right">
@@ -35,16 +35,15 @@
                 <nav class="main-menu mobile-menu">
                     <ul>
                         <li><a href="./index.php">Trang chủ</a></li>
-                        <li><a href="./categories.php">Cửa hàng</a>
-                            <ul class="sub-menu">
+                        <li><a href="./station.php">Các trạm xe</a>
+                            <!-- <ul class="sub-menu">
                                 <li><a href="product-page.php?id=1">Sản phẩm</a></li>
                                 <li><a href="shopping-cart.php">Mua hàng</a></li>
                                 <li><a href="check-out.php">Thanh toán</a></li>
-                                <li><a href="orders.php">Danh sách hóa đơn</a></li>
-                            </ul>
+                            </ul> -->
                         </li>
                     
-                        <li><a href="./contact.php">Liên hệ</a></li>
+                        
                     </ul>
                 </nav>
             </div>
