@@ -1,0 +1,112 @@
+.__form {
+    position: relative;
+
+}
+     .__form .__header {
+        font-weight: bolder;
+        padding-bottom: 10px;
+        font-size: 18px;
+        color: #444;
+        text-align: center;
+        text-transform: uppercase;
+        border-bottom: dotted 1px #999;
+        margin-bottom: 20px;
+    }
+
+    .__form .__hidden {
+        display: none;
+    }
+
+
+    .__form .__row {
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+        .__form .__row .__label {
+            position: relative;
+            font-weight: bolder;
+            float: left;
+            width: 150px;
+            color: #444;
+        }
+
+            .__form .__row .__label .__sublabel {
+                font-weight: normal;
+                color: #aaa;
+                font-size: 11px;
+            }
+
+        .__form .__row .__input {
+            position: relative;
+            margin-left: 150px;
+        }
+
+            .__form .__row .__input input {
+                box-sizing: border-box;
+                border-radius: 2px;
+                padding: 6px 8px;
+                border: 1px solid #999;
+                width: 100%;
+            }
+
+
+            .__form .__row .__input textarea {
+                box-sizing: border-box;
+                border-radius: 2px;
+                padding: 6px 8px;
+                border: 1px solid #999;
+                width: 100%;
+                height: 100px;
+                resize: none;
+            }
+
+            .__form .__row .__input select {
+                box-sizing: border-box;
+                border-radius: 2px;
+                padding: 6px 8px;
+                border: 1px solid #999;
+                width: 100%;
+            }
+
+        .__form .__row .__input.disabled > input {
+            pointer-events: none;
+            background-color: #eee;
+        }
+
+        .__form .__row .__input.disabled > textarea {
+            pointer-events: none;
+            background-color: #eee;
+        }
+
+        .__form .__row .clear {
+            clear: both;
+        }
+
+
+    .__form .__buttons {
+        padding: 10px 0px;
+        position: relative;
+        border-top: dotted 1px #999;
+    }
+
+        .__form .__buttons .__button {
+            outline: none;
+            cursor: pointer;
+            border: none;
+            font-weight: bold;
+            color: #fff;
+            padding: 10px;
+            width: 48%;
+        }
+
+        .__form .__buttons .__button.cancle {
+            background-color: #ddd;
+            color: #666;
+            float: left;
+        }
+
+        .__form .__buttons .__button.submit {
+            background-color: #7abd1a;
+            float: right;
+        }
