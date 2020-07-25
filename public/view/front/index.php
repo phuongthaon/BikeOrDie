@@ -42,7 +42,7 @@
                         <div class="col-lg-12">
                             <h1>2020</h1>
                             <h2>Đi xe đạp là niềm vui</h2>
-                            <a href="./categories.php" class="primary-btn">See More</a>
+                            <a href="./station.php" class="primary-btn">See More</a>
                         </div>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                         <div class="col-lg-12">
                             <h1>2020</h1>
                             <h2>Đi xe đạp là trải nghiệm</h2>
-                            <a href="./categories.php" class="primary-btn">See More</a>
+                            <a href="./station.php" class="primary-btn">See More</a>
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                         <div class="col-lg-12">
                             <h1>2020</h1>
                             <h2>Đi xe đạp để khỏe mạnh</h2>
-                            <a href="./categories.php" class="primary-btn">See More</a>
+                            <a href="./station.php" class="primary-btn">See More</a>
                         </div>
                     </div>
                 </div>
