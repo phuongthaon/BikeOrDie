@@ -21,7 +21,7 @@
         $tmp = mysqli_query($con,"INSERT INTO activate( `userId`, `time`,  `borrowTime`, `bikeId`, `price`) 
                                         VALUES ('{$_SESSION['id']}', '{$time}',  CURRENT_TIMESTAMP(),  '{$bike}', '{$price['price']}')");
         echo "ẻtght";
-        header("Location: index.php");
+        header("Location: countDown.html");
     }
 
 
