@@ -5,6 +5,7 @@
     //     $unique = "ORD".$today."_".$rand;
     //     return $unique;
     // }
+    session_start();
     include('../../../model/connect.php');
     //kiem tra xem nếu đặt hàng
     if(isset($_GET['id'])){

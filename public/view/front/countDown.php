@@ -67,7 +67,30 @@ button:hover {
 }
 
 
-</style> 
+</style>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyA5y5AeQ-PE6Jr4L6z9_5sVuVEHu9LYFJI&sensor=false&v=3&libraries=geometry"></script>
+<script src="../../js/jquery-3.3.1.min.js"></script>
+<script>
+  $(document).ready(function(){
+  $('.return').click(function(){
+
+    var latLngA = new google.maps.LatLng(-34, 151);
+    var latLngB = new google.maps.LatLng(-34, 160);
+    var distance = google.maps.geometry.spherical.computeDistanceBetween(latLngA, latLngB);
+    console.log(distance);
+    $.ajax({
+      url: "countDown.php",
+      type:"post",
+      data:{distance: distance},
+      success: function(response){
+        console.log(response);
+      }
+    })
+    // document.getElementById("distance").innerHTML = distance;
+  })
+})
+</script>
+
 </head> 
 <body> 
 <h1>Countdown Clock</h1> 
@@ -90,19 +113,25 @@ button:hover {
 <input id="tie" value= <?php echo "{$_GET['time']}"; ?> style= "display: none;">  
 <br><br><br><br><br><br><br><br>
 <form method="POST">
-    <button type="submit" name="return">Trả xe</button>
+    <button class="return" type="submit" name="return" value="">Trả xe</button>
 </form>
 
 <?php
   if(isset($_POST['return'])){
+    
 //    $id= $_GET['id'];
    
 // echo "";
 
 include('../../../model/connect.php');
-   $up = mysqli_query($con, "UPDATE bike SET status = 0 WHERE id = '{$_GET['id']}'");
+    $bikeId = $_GET['id'];
+    
+    $up = mysqli_query($con, "UPDATE bike SET status = 0 WHERE id = '{$_GET['id']}'");
         header("Location: index.php");
   }
+?>
+<?php
+      include('../layouts/front/embed.js.php');
 ?>
 <script  type="text/javascript"> 
   
