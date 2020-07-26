@@ -8,7 +8,6 @@
 <body>
     <?php
         session_start();
-        include('../../../controller/front/categories.php');
     ?>
     <!-- Page Preloder -->
     <div id="preloder">
