@@ -6,7 +6,7 @@
     include('../layouts/front/head.php');
     include('../../../model/connect.php');
     ?>
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyA5y5AeQ-PE6Jr4L6z9_5sVuVEHu9LYFJI&sensor=false&v=3&libraries=geometry"></script>
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyA5y5AeQ-PE6Jr4L6z9_5sVuVEHu9LYFJI&sensor=false&v=3&libraries=geometry"></script>
     <style>
         a:hover {
             color: black;
@@ -17,7 +17,6 @@
 <body>
     <?php
     session_start();
-    include('../../../controller/front/categories.php');
     ?>
     <!-- Page Preloder -->
     <div id="preloder">
@@ -52,13 +51,16 @@
             <div class="product-filter">
                 <div class="col-lg-4 text-center" style="padding: 10px; margin: 0 auto;">
                     <img src="../../../img/avatar-2.gif" style="width: 300px; height:auto;"></img>
+                    <?php 
+                     $result =mysqli_fetch_array(mysqli_query($con, "SELECT * FROM users WHERE id = {$_SESSION['id']} "));
 
+                    ?>
                     <div class="section-title">
-                        <h3>Nguyễn Văn A</h3>
+                        <h3><?php echo "{$result['name']}"; ?></h3>
                     </div>
                     <div>Tuổi: 20</div>
                     <div>Ngày sinh: 14/08/2000</div>
-                    <div>Địa chỉ mail: nva@gmail.com</div>
+                    <div>Địa chỉ mail: <?php echo "{$result['email']}"; ?></div>
                 </div>
                 <!-- A grey horizontal navbar that becomes vertical on small screens -->
                 <nav class="navbar navbar-expand-sm bg-light">
@@ -134,7 +136,7 @@
                             </div>';
                     }
                 } else {
-                    echo "Bạn chưa mượn xe nào.";
+                    echo "<br><br><br>Bạn chưa mượn xe nào.<br><br><br>";
                 }
 
 
@@ -189,22 +191,7 @@
                     console.log(distance);
                     document.getElementById('distance').innerHTML = distance;
                 </script>
-                <script>
-                    var x = document.getElementById("demo");
-
-                    function getLocation() {
-                        if (navigator.geolocation) {
-                            navigator.geolocation.getCurrentPosition(showPosition);
-                        } else {
-                            x.innerHTML = "Geolocation is not supported by this browser.";
-                        }
-                    }
-
-                    function showPosition(position) {
-                        x.innerHTML = "Latitude: " + position.coords.latitude +
-                            "<br>Longitude: " + position.coords.longitude;
-                    }
-                </script>
+                
             </div>
         </div>
         </div>

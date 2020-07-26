@@ -1,10 +1,10 @@
 
     <meta charset="UTF-8">
-    <meta name="description" content="Trang web bán sách">
-    <meta name="keywords" content="hiệu sách online, mua sách ở đâu, mua sách online ở đâu, đọc sách điện tử, đọc sách hay online ">
+    <meta name="description" content="Trang web đặt xe">
+    <meta name="keywords" content="đặt xe online, đặt xe ở đâu, đặt xe online ở đâu">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Book Store - Website bán sách hàng đầu </title>
+    <title>Bike Or Die - Website mượn xe đạp hàng đầu </title>
 
 
     <!-- Google Font -->

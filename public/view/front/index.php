@@ -8,6 +8,7 @@
 <body>
     <?php
         session_start();
+       
     ?>
     <!-- Page Preloder -->
     <div id="preloder">
@@ -81,21 +82,21 @@
                         <div class="single-features-ads first">
                             <img src="../../../img/icons/f-delivery.png" alt="">
                             <h4>Thao tác tiện lợi</h4>
-                            <p>Chúng tôi nhận giao hàng toàn quốc, đảm bảo hàng hóa được giao một cách nhanh chóng nhất với chi phí thấp. </p>
+                            
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="single-features-ads second">
                             <img src="../../../img/icons/coin.png" alt="">
                             <h4>Thanh toán mọi lúc</h4>
-                            <p>Chúng tôi chấp nhận thanh toán bằng nhiều phương thức khác nhau, rất an toàn và tiện lợi. </p>
+                            
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="single-features-ads">
                             <img src="../../../img/icons/chat.png" alt="">
                             <h4>Hoạt động 24/7</h4>
-                            <p>Với đội ngũ hỗ trợ nhiệt tình, mọi vấn đề thắc mắc của bạn về chúng tôi sẽ được giải đáp ngay lập tức. </p>
+                            
                         </div>
                     </div>
                 </div>
