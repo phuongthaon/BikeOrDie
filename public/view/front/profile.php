@@ -51,13 +51,16 @@
             <div class="product-filter">
                 <div class="col-lg-4 text-center" style="padding: 10px; margin: 0 auto;">
                     <img src="../../../img/avatar-2.gif" style="width: 300px; height:auto;"></img>
+                    <?php 
+                     $result =mysqli_fetch_array(mysqli_query($con, "SELECT * FROM users WHERE id = {$_SESSION['id']} "));
 
+                    ?>
                     <div class="section-title">
-                        <h3>Nguyễn Văn A</h3>
+                        <h3><?php echo "{$result['name']}"; ?></h3>
                     </div>
                     <div>Tuổi: 20</div>
                     <div>Ngày sinh: 14/08/2000</div>
-                    <div>Địa chỉ mail: nva@gmail.com</div>
+                    <div>Địa chỉ mail: <?php echo "{$result['email']}"; ?></div>
                 </div>
                 <!-- A grey horizontal navbar that becomes vertical on small screens -->
                 <nav class="navbar navbar-expand-sm bg-light">
