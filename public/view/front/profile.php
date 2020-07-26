@@ -17,7 +17,6 @@
 <body>
     <?php
     session_start();
-    include('../../../controller/front/categories.php');
     ?>
     <!-- Page Preloder -->
     <div id="preloder">
@@ -134,7 +133,7 @@
                             </div>';
                     }
                 } else {
-                    echo "Bạn chưa mượn xe nào.";
+                    echo "<br><br><br>Bạn chưa mượn xe nào.<br><br><br>";
                 }
 
 
